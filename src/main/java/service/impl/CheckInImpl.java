@@ -2,6 +2,7 @@ package service.impl;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import service.CheckIn;
 
 import java.io.IOException;
@@ -24,7 +25,15 @@ public class CheckInImpl implements CheckIn {
             e.printStackTrace();
         }
         assert document != null;
-        System.out.println(document.toString());
+//        System.out.println(document.toString());
+        String string = document.select("body").text();
+        System.out.println(string);
+
+        try {
+            Jsoup.connect("https://sc.ftqq.com/SCU16894T7bc1c15fefbb7902826a77d854646cf35a1e0eaa17b12.send?text=主人我已经帮你签到了哦~&desp="+string).get();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return null;
     }
