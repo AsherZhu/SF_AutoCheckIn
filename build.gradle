@@ -13,4 +13,7 @@ repositories {
 dependencies {
     // jsoup HTML parser library @ https://jsoup.org/
     compile 'org.jsoup:jsoup:1.11.2'
+
+    compile 'com.alibaba:fastjson:1.2.41'
+
 }
