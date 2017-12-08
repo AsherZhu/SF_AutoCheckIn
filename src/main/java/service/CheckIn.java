@@ -8,5 +8,5 @@ import java.util.HashMap;
  * \
  */
 public interface CheckIn {
-    String checkIn(String url, HashMap cookie);
+    String checkIn(String username,HashMap cookie);
 }

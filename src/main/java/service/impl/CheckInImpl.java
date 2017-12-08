@@ -15,7 +15,9 @@ import java.util.HashMap;
 public class CheckInImpl implements CheckIn {
 
     @Override
-    public String checkIn(String url, HashMap cookie) {
+    public String checkIn(String username,HashMap cookie) {
+
+        String url = "http://book.sfacg.com/ajax/ashx/Common.ashx?op=signinNew&nid=0&_=" + System.currentTimeMillis();
         Document document = null;
 
         try {
@@ -31,7 +33,7 @@ public class CheckInImpl implements CheckIn {
 
         //利用Server酱 推送签到状态到微信
         try {
-            Jsoup.connect("https://sc.ftqq.com/SCU16894T7bc1c15fefbb7902826a77d854646cf35a1e0eaa17b12.send?text=主人我已经帮你签到了哦~&desp="+string).get();
+            Jsoup.connect("https://sc.ftqq.com/SCU16894T7bc1c15fefbb7902826a77d854646cf35a1e0eaa17b12.send?text=主人我已经帮你吧《"+username+"》这个账号签到了哦~&desp="+string).get();
         } catch (IOException e) {
             e.printStackTrace();
         }
