@@ -7,7 +7,7 @@ import java.util.HashMap;
  * \* Date:2017/12/7 23:18
  * \处理cookie 从字符串转变为HashMap
  */
-public class ProcessCookie {
+public class ProcessCookieUtil {
 
     public static HashMap<String, String> getCookie(String cookieString) {
 

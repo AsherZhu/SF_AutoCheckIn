@@ -1,9 +1,8 @@
 import com.alibaba.fastjson.JSONObject;
 import service.CheckIn;
-import service.impl.CheckInImpl;
 import util.AnalysisJsonUtil;
 import util.GetPathUtil;
-import util.ProcessCookie;
+import util.ProcessCookieUtil;
 
 import java.util.HashMap;
 
@@ -15,14 +14,16 @@ import java.util.HashMap;
  */
 public class Entrance {
     public static void main(String[] args) {
-        String path = GetPathUtil.getPath()+"/Cookies.json";
-        JSONObject jsonObject = AnalysisJsonUtil.AnalysisJson(path);
+        String path = GetPathUtil.getPath() + "/UserInfo.json";
+        JSONObject userInfo = AnalysisJsonUtil.jsonFileToJsonObject(path);
 
-        for (String s : jsonObject.keySet()) {
-            HashMap<String, String> hashMap = ProcessCookie.getCookie((String) jsonObject.get(s));
+        for (String nick : userInfo.keySet()) {
 
-            CheckIn checkIn = new CheckInImpl();
-            checkIn.checkIn(s,hashMap);
+            JSONObject info = AnalysisJsonUtil.jsonStringToJsonObject(userInfo.getString(nick));
+
+            HashMap cookie = ProcessCookieUtil.getCookie(info.getString("Cookie"));
+
+            CheckIn.checkIn(nick, cookie, info.getString("SCKEY"));
 
         }
     }

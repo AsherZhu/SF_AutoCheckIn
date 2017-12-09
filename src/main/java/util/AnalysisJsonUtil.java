@@ -8,28 +8,29 @@ import java.io.*;
 /**
  * \* By:zhushuai.net@gmail.com
  * \* Date:2017/12/8 10:17
- * \* 从文json读取json字符串 并转为jsonObject返回
  */
 public class AnalysisJsonUtil {
 
+    /**
+     *  从文json读取json字符串 并转为jsonObject返回
+     * @param path
+     * @return
+     */
+    public static JSONObject jsonFileToJsonObject(String path) {
 
-    public static JSONObject AnalysisJson(String path) {
-
-        StringBuilder jsonString = new StringBuilder();
-        try (
-                BufferedReader reader = new BufferedReader(new FileReader(path))
-        ){
-            String line;
-            while ((line = reader.readLine()) != null) {
-                jsonString.append(line);
-            }
-        } catch(IOException e){
-            e.printStackTrace();
-            System.out.println("配置文件，或者路径" + path + "不存在");
-        }
-
+        String jsonString = ReadConfigFileUtil.readConfigFile(path);
         JSONObject jsonObject = JSON.parseObject(String.valueOf(jsonString));
-
         return jsonObject;
     }
+
+    /**
+     *  json字符串转为jsonObject返回
+     * @param jsonString
+     * @return
+     */
+    public static JSONObject jsonStringToJsonObject(String jsonString) {
+        JSONObject jsonObject = JSON.parseObject(String.valueOf(jsonString));
+        return jsonObject;
+    }
+
 }
