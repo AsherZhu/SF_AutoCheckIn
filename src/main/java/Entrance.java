@@ -3,7 +3,6 @@ import service.CheckIn;
 import util.AnalysisJsonUtil;
 import util.GetPathUtil;
 import util.ProcessCookieUtil;
-
 import java.util.HashMap;
 
 

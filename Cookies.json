@@ -1,4 +1,165 @@
 {
-  "未完丶待续": "UM_distinctid=16037297a9a3b1-0730a46fde4831-7b113d-1fa400-16037297a9de4; .SFCommunity=2CB684FBF4497E4315B4C51B0A555F9B246E73F2056F84ABD00C656D5E52DB25F0E435A34A5EFF358F4B2708166052CF78CFBE79C687047A23D1D4D01A78C6C15D1C37DC5F8EA051DA00AC7B2F301D06E5718965536EBD191247C14AAE4D7B1F; nickNameCookie=E884AB30EE0BF298; dnt=userid=3378288&password=%2ftC%2bS3BJ%2fcg8UMkh7c%2bO4xlg79tG0XYco0e3FmbxK0t%2fk99IyFfX3w%3d%3d&avatar=avatars%2fupload%2fAPP%2f1709%2f1505237690286.jpg&tpp=0&ppp=0&pmsound=0&invisible=0&referer=index.aspx&sigstatus=0&expires=21600; CNZZDATA30013274=cnzz_eid%3D1279945642-1512753134-%26ntime%3D1512753134; Hm_lvt_c35b1f7e895951a1c3dea9225e12ac63=1512754064; Hm_lpvt_c35b1f7e895951a1c3dea9225e12ac63=1512754064"
-
+  "status": 200,
+  "data": {
+    "daySignin": [
+      {
+        "day": 1,
+        "hasSignin": true,
+        "continuousSignin": 2
+      },
+      {
+        "day": 2,
+        "hasSignin": true,
+        "continuousSignin": 3
+      },
+      {
+        "day": 3,
+        "hasSignin": true,
+        "continuousSignin": 4
+      },
+      {
+        "day": 4,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 5,
+        "hasSignin": true,
+        "continuousSignin": 1
+      },
+      {
+        "day": 6,
+        "hasSignin": true,
+        "continuousSignin": 2
+      },
+      {
+        "day": 7,
+        "hasSignin": true,
+        "continuousSignin": 3
+      },
+      {
+        "day": 8,
+        "hasSignin": true,
+        "continuousSignin": 4
+      },
+      {
+        "day": 9,
+        "hasSignin": true,
+        "continuousSignin": 5
+      },
+      {
+        "day": 10,
+        "hasSignin": true,
+        "continuousSignin": 6
+      },
+      {
+        "day": 11,
+        "hasSignin": true,
+        "continuousSignin": 7
+      },
+      {
+        "day": 12,
+        "hasSignin": true,
+        "continuousSignin": 8
+      },
+      {
+        "day": 13,
+        "hasSignin": true,
+        "continuousSignin": 9
+      },
+      {
+        "day": 14,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 15,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 16,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 17,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 18,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 19,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 20,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 21,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 22,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 23,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 24,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 25,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 26,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 27,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 28,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 29,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 30,
+        "hasSignin": false,
+        "continuousSignin": 0
+      },
+      {
+        "day": 31,
+        "hasSignin": false,
+        "continuousSignin": 0
+      }
+    ],
+    "dayMonth": 31,
+    "dayOfWeek": 5,
+    "curDay": 13
+  }
 }

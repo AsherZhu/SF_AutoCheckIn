@@ -2,12 +2,16 @@ group 'SF_AutoCheckIn'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'war'
+apply plugin: 'idea'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
 
 dependencies {
@@ -17,3 +21,28 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.41'
 
 }
+
+jar {
+    String someString = ''
+    configurations.runtime.each {someString = someString + " lib\\"+it.name} //遍历项目的所有依赖的jar包赋值给变量someString
+    manifest {
+        attributes 'Main-Class': 'Entrance'
+        attributes 'Class-Path': someString
+    }
+}
+
+task clearPj(type:Delete){
+    delete 'build','target'
+}
+
+task copyJar(type:Copy){
+    from configurations.runtime
+    into ('build/libs/lib')
+
+}
+
+task release(type: Copy,dependsOn: [build,copyJar]) {
+//    from  'conf'
+    //   into ('build/libs/eachend/conf')
+}
+

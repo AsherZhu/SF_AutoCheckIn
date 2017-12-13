@@ -2,8 +2,11 @@ package util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.*;
+import java.util.HashMap;
 
 /**
  * \* By:zhushuai.net@gmail.com
@@ -19,7 +22,7 @@ public class AnalysisJsonUtil {
     public static JSONObject jsonFileToJsonObject(String path) {
 
         String jsonString = ReadConfigFileUtil.readConfigFile(path);
-        JSONObject jsonObject = JSON.parseObject(String.valueOf(jsonString));
+        JSONObject jsonObject = JSON.parseObject(jsonString);
         return jsonObject;
     }
 
@@ -29,7 +32,7 @@ public class AnalysisJsonUtil {
      * @return
      */
     public static JSONObject jsonStringToJsonObject(String jsonString) {
-        JSONObject jsonObject = JSON.parseObject(String.valueOf(jsonString));
+        JSONObject jsonObject = JSON.parseObject(jsonString);
         return jsonObject;
     }
 

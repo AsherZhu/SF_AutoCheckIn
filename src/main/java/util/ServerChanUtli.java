@@ -1,7 +1,6 @@
 package util;
 
 import org.jsoup.Jsoup;
-
 import java.io.IOException;
 
 /**
