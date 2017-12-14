@@ -17,7 +17,7 @@ public class AnalysisJsonUtil {
     /**
      *  从文json读取json字符串 并转为jsonObject返回
      * @param path
-     * @return
+     * @return jsonObject
      */
     public static JSONObject jsonFileToJsonObject(String path) {
 
@@ -29,7 +29,7 @@ public class AnalysisJsonUtil {
     /**
      *  json字符串转为jsonObject返回
      * @param jsonString
-     * @return
+     * @return jsonObject
      */
     public static JSONObject jsonStringToJsonObject(String jsonString) {
         JSONObject jsonObject = JSON.parseObject(jsonString);

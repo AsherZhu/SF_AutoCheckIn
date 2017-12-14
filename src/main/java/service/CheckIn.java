@@ -51,34 +51,38 @@ public class CheckIn {
         //判断是否签到成功如果Msg.get("status") = 200 成功 400失败
         // 利用Server酱 推送签到状态到微信
 
-        String text = null;
-        String desp = null;
+        StringBuffer text = new StringBuffer();
+        StringBuffer desp = new StringBuffer();
+        int status =signinNewJsonObj.getInteger("status");
 
         try {
-            switch (signinNewJsonObj.getInteger("status")) {
+            switch (status) {
                 case 200: {
                     String coupons = signinNewJsonObj.getString("coupons");
-                    text = "主人，我已经帮你吧<" + nick + ">这个账号签到了呢~~~";
-                    desp = "(๑•̀ㅂ•́)و✧本次签到获得了" + coupons + "代券，今天是"+MonthS+"月"+curDay+"号，已经连续签到了"+continuousSignin+"天~";
+
+                    text.append("主人，我已经帮你吧<").append(nick).append(">这个账号签到了呢~~~");
+                    desp.append("(๑•̀ㅂ•́)و✧本次签到获得了").append(coupons).append("代券，今天是").append(MonthS).append("月").append(curDay).append("号，已经连续签到了").append(continuousSignin).append("天~");
+
                     ServerChanUtli.ServerChan(key, text, desp);
-                    System.out.println(text + desp);
+                    System.out.println(text.append(desp));
                     break;
                 }
                 case 400: {
                     String error = signinNewJsonObj.getString("msg");
-                    text = "主人很抱歉<" + nick + ">签到失败了";
-                    desp = "失败原因：" + error+"，今天是"+MonthS+"月"+curDay+"号，已经连续签到了"+continuousSignin+"天~";
 
+                    text.append("主人很抱歉<").append(nick).append(">签到失败了");
+                    desp.append("失败原因：").append(error).append("，今天是").append(MonthS).append("月").append(curDay).append("号，已经连续签到了").append(continuousSignin).append("天~");
                     ServerChanUtli.ServerChan(key, text, desp);
-                    System.out.println("主人很抱歉<" + nick + ">签到失败了失败原因：" + error);
+                    System.out.println(text.append(desp));
                     break;
                 }
                 default: {
                     String error = signinNewJsonObj.getString("msg");
-                    text = "主人很抱歉<" + nick + ">签到失败了";
-                    desp = "失败原因：" + error;
+
+                    text.append("主人很抱歉<").append(nick).append(">签到失败了");
+                    desp.append("失败原因：").append(error).append("，错误代码是：").append(status).append("，今天是").append(MonthS).append("号，已经连续签到了").append(continuousSignin).append("天~");
                     ServerChanUtli.ServerChan(key, text, desp);
-                    System.out.println("主人很抱歉<" + nick + ">签到失败了失败原因：" + error);
+                    System.out.println(text.append(desp));
                 }
 
             }

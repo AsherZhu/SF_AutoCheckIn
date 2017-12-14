@@ -10,7 +10,8 @@ import java.io.IOException;
  */
 public class ServerChanUtli {
 
-    public static void ServerChan(String key, String text, String desp) throws IOException {
+    public static void ServerChan(String key, StringBuffer text, StringBuffer desp) throws IOException {
         Jsoup.connect("https://sc.ftqq.com/" + key + ".send?text=" + text + "~&desp=" + desp).get();
+
     }
 }
