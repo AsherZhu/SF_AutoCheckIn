@@ -45,4 +45,3 @@ task release(type: Copy,dependsOn: [build,copyJar]) {
 //    from  'conf'
     //   into ('build/libs/eachend/conf')
 }
-
